@@ -10,6 +10,6 @@ if (isset($_SERVER['start_cli_script'])) {
         4
     );
 
-    $format = 'time: %1$.4f%2$s';
+    $format = '%2$stime: %1$.4f%2$s';
     echo sprintf($format, $time, PHP_EOL);
 }

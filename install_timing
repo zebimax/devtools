@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+$ini = sprintf(
+    '%2$sauto_prepend_file=%1$s' . DIRECTORY_SEPARATOR .
+    'start.php%2$sauto_append_file=%1$s' . DIRECTORY_SEPARATOR .
+    'end.php%2$s',
+    __DIR__,
+    PHP_EOL
+);
+$ini_file = php_ini_loaded_file();
+shell_exec("echo '$ini' >> $ini_file");

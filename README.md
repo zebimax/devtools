@@ -14,3 +14,5 @@ Dev Tools
  sudo ./install_timing
 
 
+@todo add memory
+@todo do I need end file?

@@ -8,6 +8,7 @@ foreach ($lines as $line) {
     if (strpos($line, ':') !== false) {
         $line = trim($line);
         $command = substr($line, 0, strpos($line, ' '));
+        $command = str_replace('[32m', '', $command);
         if (trim($command)) {
             file_put_contents(
                 $file,

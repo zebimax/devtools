@@ -42,3 +42,5 @@ register_shutdown_function(function (array $styles) {
         echo sprintf($format, $mem, PHP_EOL, $styles['title'], $styles['reset'], $sz);
     }
 }, $styles);
+unset($color);
+unset($reset);

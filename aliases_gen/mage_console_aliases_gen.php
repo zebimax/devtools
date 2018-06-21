@@ -1,7 +1,7 @@
 <?php
-$file = 'aliases_sym_te.sh';
-$alias = 'alias %s=\'bin/console %s\'';
-$commandsRaw = `bin/console`;
+$file = 'aliases_mage.sh';
+$alias = 'alias %s=\'bin/magento %s\'';
+$commandsRaw = `bin/magento`;
 
 $lines = explode("\n", substr($commandsRaw, strpos($commandsRaw, 'Available commands:') + strlen('Available commands:')));
 foreach ($lines as $line) {

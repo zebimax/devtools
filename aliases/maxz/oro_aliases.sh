@@ -1,3 +1,44 @@
+#!/usr/bin/env bash
+
+#alias cs_com='COMPOSER=dev.json composer install --working-dir=application/commerce'
+#alias support='xclip -sel clip < /home/ajax/.support'
+
+alias oroecd='app/console oro:entity-config:debug'
+alias codesniff='usr/local/bin/phpcs -p --encoding=utf-8 --extensions=php --standard=/home/ajax/www/standards/cs/ruleset.xml'
+
+#ORO INSTALL
+alias oroup='app/console oro:platform:update --force --timeout=100000'
+alias oroin='app/console oro:install --organization-name Oro --user-name admin --user-email max@oroinc.com --user-firstname Maxym --user-lastname Perepelytsya --user-password admin --sample-data y --application-url http://crmee.a --timeout 1000'
+alias oroinnd='app/console oro:install --organization-name Oro --user-name admin --user-email max@oroinc.com --user-firstname Maxym --user-lastname Perepelytsya --user-password admin --sample-data n --application-url http://crmee.a --timeout 1000'
+alias oroin20='app/console oro:install --organization-name Oro --user-name admin --user-email max@oroinc.com --user-firstname Maxym --user-lastname Perepelytsya --user-password admin --sample-data y --application-url http://crmee20.a --timeout 1000'
+alias oroinnd20='app/console oro:install --organization-name Oro --user-name admin --user-email max@oroinc.com --user-firstname Maxym --user-lastname Perepelytsya --user-password admin --sample-data n --application-url http://crmee20.a --timeout 1000'
+
+alias oroincce='app/console oro:install --organization-name Oro --user-name admin --user-email zebimax@gmail.com --user-firstname Maxym --user-lastname Perepelytsya --user-password admin --sample-data n --application-url http://cce.a --timeout 1000'
+alias oroincce_demo='app/console oro:install --organization-name Oro --user-name admin --user-email zebimax@gmail.com --user-firstname Maxym --user-lastname Perepelytsya --user-password admin --sample-data y --application-url http://cce.a --timeout 1000'
+
+alias cs_crm_ee='COMPOSER=dev.json composer install --working-dir=application/crm-enterprise'
+alias cs_com_ee='COMPOSER=dev.json composer install --working-dir=application/commerce-enterprise'
+alias cs_crm='COMPOSER=dev.json composer install --working-dir=application/crm'
+alias cs_com_crm_ee='COMPOSER=dev.json composer install --working-dir=application/commerce-crm-ee'
+alias cs_com='COMPOSER=dev.json composer install --working-dir=application/commerce'
+
+#ORO TESTS
+alias orointests='php app/console oro:install -v --user-name=admin --user-email=admin@example.com --user-firstname=John --user-lastname=Doe --user-password=admin --drop-database --organization-name=OroCRM --application-url=http://localhost --sample-data=n --env=test --symlink --skip-translations --skip-assets --no-debug'
+alias oroin12tests='php app/console oro:install -v --user-name=admin --user-email=admin@example.com --user-firstname=John --user-lastname=Doe --user-password=admin --drop-database --organization-name=OroCRM --application-url=http://localhost --sample-data=n --env=test --symlink --skip-assets --no-debug'
+alias func_tests='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional'
+alias unit_tests='php -d zend.enable_gc=0 bin/phpunit --testsuite=unit'
+alias func_tests_14='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-1-of-4'
+alias func_tests_24='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-2-of-4'
+alias func_tests_34='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-3-of-4'
+alias func_tests_44='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-4-of-4'
+alias func_tests_16='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-1-of-6'
+alias func_tests_26='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-2-of-6'
+alias func_tests_36='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-3-of-6'
+alias func_tests_46='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-4-of-6'
+alias func_tests_56='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-5-of-6'
+alias func_tests_66='php -d zend.enable_gc=0 bin/phpunit --testsuite=functional-6-of-6'
+
+
 # ORO_EXTEND
 alias oroecd_ev_auth_status='app/console oro:entity-config:debug "Extend\Entity\EV_Auth_Status"'
 alias oroecd_ev_ce_attendee_status='app/console oro:entity-config:debug "Extend\Entity\EV_Ce_Attendee_Status"'
@@ -164,3 +205,13 @@ alias oroecd_zendesktickettype='app/console oro:entity-config:debug "Oro\Bundle\
 alias oroecd_zendeskuser='app/console oro:entity-config:debug "Oro\Bundle\ZendeskBundle\Entity\User"'
 alias oroecd_zendeskuserrole='app/console oro:entity-config:debug "Oro\Bundle\ZendeskBundle\Entity\UserRole"'
 alias oroecd_zendeskzendeskresttransport='app/console oro:entity-config:debug "Oro\Bundle\ZendeskBundle\Entity\ZendeskRestTransport"'
+
+#alias rcsu='/usr/bin/time app/console oro:message-queue:consume --env prod'
+#
+#
+#alias cdcrm='cd application/crm'
+#alias cdcrme='cd application/crm-enterprise'
+#alias cdcom='cd application/commerce'
+#alias cdcome='cd application/commerce-enterprise'
+#alias cdcce='cd application/commerce-crm-ee'
+#alias cdplatf='cd application/platform'

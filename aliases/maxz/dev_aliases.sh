@@ -55,8 +55,10 @@ alias confmysql='nn /etc/mysql/my.cnf'
 #AJAX
 alias countphp='wc -l `find . -iname "*.php"`'
 alias xclip="xclip -selection -c"
-alias idrsapub="cat ~/.ssh/id_rsa.pub | xclip -sel clip"
 
+alias idrsapub='eval `ssh-agent` && ssh-add ~/.ssh/id_rsa'
+alias idrsapub-te='eval `ssh-agent` && ssh-add ~/.ssh/id_rsa_zebimax_te'
+alias idrsapub-copy="cat ~/.ssh/id_rsa.pub | xclip -sel clip"
 ## HG
 #alias hgs='hg branches'
 #alias hgb='hg branch'
